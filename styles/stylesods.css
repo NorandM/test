@@ -1,0 +1,268 @@
+/* Reseteo y estructura base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #2F2546;
+    color: #fff;
+    line-height: 1.6;
+    overflow-x: hidden;
+    transition: background-color 0.3s ease-in-out;
+}
+
+h1, h2, h3, h4 {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #f3f3f3;
+    letter-spacing: 0.1em;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 60px;
+    font-size: 4rem;
+    font-weight: 900;
+    color: transparent;
+    letter-spacing: 4px;
+    background: linear-gradient(135deg, #ff7e79, #42a5f5);
+    -webkit-background-clip: text;
+    background-clip: text;
+    margin-bottom: 40px;
+    text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.3);
+    animation: glow 1.2s infinite alternate ease-in-out;
+    transition: transform 0.3s ease;
+}
+
+header:hover {
+    transform: scale(1.05);
+}
+
+@keyframes glow {
+    0%, 100% {
+        text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.3);
+    }
+    50% {
+        text-shadow: 0px 0px 30px rgba(255, 255, 255, 0.6);
+    }
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1e1a36;
+    padding: 20px 8%;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+nav:hover {
+    background-color: #292641;
+}
+
+nav a {
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 10px 20px;
+    transition: color 0.4s ease, transform 0.3s ease;
+}
+
+nav a:hover {
+    color: #00e5ff;
+    transform: translateY(-2px);
+}
+
+.btn-register {
+    background: linear-gradient(135deg, #ff6b6b, #f06292);
+    color: white;
+    padding: 14px 40px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    transition: background-color 0.5s ease, transform 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0px 10px 20px rgba(255, 80, 80, 0.4);
+}
+
+.btn-register:hover {
+    background: linear-gradient(135deg, #f06292, #ec407a);
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0px 20px 40px rgba(255, 80, 80, 0.6);
+}
+/* Secciones */
+.section-ods, .section-importance {
+    padding:150px 0;
+    text-align: left;
+    background-color: #3B2A57;
+    border-radius: 25px;
+    margin-bottom: 60px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s ease;
+}
+
+.section-importance {
+    background-color: #332A4E;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.container h2 {
+    color: #FFDD99;
+}
+
+/* Contenido de las ODS */
+.content-left {
+    width: 60%;
+    display: inline-block;
+    vertical-align: top;
+    padding-right: 30px;
+    color: #DDD;
+}
+
+.content-right {
+    width: 35%;
+    display: inline-block;
+    text-align: center;
+}
+
+.content-right img {
+    max-width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content-right img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+}
+
+h2, h3 {
+    font-size: 2.7rem;
+    margin-bottom: 25px;
+    color: #FFDD99;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+p {
+    font-size: 1.2rem;
+    color: #E5E5E5;
+}
+
+/* ODS List */
+.ods-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    background-color: #4E3C6D;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+}
+
+.ods-text {
+    width: 60%;
+    font-size: 1.2rem;
+}
+
+.ods-image img {
+    width: 100%;
+    max-width: 320px;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ods-image img:hover {
+    transform: scale(1.07);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+/* Importancia de las ODS */
+.importance-images {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.importance-images img {
+    width: 45%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.6);
+}
+
+.importance-images img:hover {
+    transform: scale(1.06);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.7);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 3.2rem;
+    }
+    
+    .content-left, .content-right, .ods-text, .ods-image {
+        width: 100%;
+    }
+    
+    .ods-list {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .importance-images {
+        flex-direction: column;
+    }
+
+    .importance-images img {
+        width: 85%;
+        margin-bottom: 30px;
+    }
+
+    nav ul li {
+        display: block;
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    p {
+        font-size: 1rem;
+    }
+
+    h2, h3 {
+        font-size: 2rem;
+    }
+
+    .register-button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
+
+
+/*Ods information
+
+
